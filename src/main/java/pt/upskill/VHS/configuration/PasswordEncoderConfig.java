@@ -1,4 +1,4 @@
-package pt.upskill.m5_spring_2026.configuration;
+package pt.upskill.VHS.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

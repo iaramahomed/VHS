@@ -1,8 +1,25 @@
-package pt.upskill.m5_spring_2026.models;
+package pt.upskill.VHS.entities;
 
-public class SignUpModel {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
+public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
     private String username;
     private String password;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;

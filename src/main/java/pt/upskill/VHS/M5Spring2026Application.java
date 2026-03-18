@@ -1,4 +1,4 @@
-package pt.upskill.m5_spring_2026;
+package pt.upskill.VHS;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

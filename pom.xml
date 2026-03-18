@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pt.upskill</groupId>
-    <artifactId>m5_spring_2026</artifactId>
+    <artifactId>VHS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>m5_spring_2026</name>
-    <description>m5_spring_2026</description>
+    <name>VHS</name>
+    <description>VHS</description>
     <url/>
     <licenses>
         <license/>

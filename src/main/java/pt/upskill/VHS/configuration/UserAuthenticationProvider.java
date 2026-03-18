@@ -1,4 +1,4 @@
-package pt.upskill.m5_spring_2026.configuration;
+package pt.upskill.VHS.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -8,8 +8,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
-import pt.upskill.m5_spring_2026.entities.User;
-import pt.upskill.m5_spring_2026.services.AuthService;
+import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.services.AuthService;
 
 import java.util.ArrayList;
 import java.util.List;

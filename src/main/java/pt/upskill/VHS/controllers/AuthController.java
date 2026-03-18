@@ -1,13 +1,13 @@
-package pt.upskill.m5_spring_2026.controllers;
+package pt.upskill.VHS.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pt.upskill.m5_spring_2026.entities.User;
-import pt.upskill.m5_spring_2026.models.SignUpModel;
-import pt.upskill.m5_spring_2026.services.AuthService;
+import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.models.SignUpModel;
+import pt.upskill.VHS.services.AuthService;
 
 @Controller
 @RequestMapping("/auth")

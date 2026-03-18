@@ -1,4 +1,4 @@
-package pt.upskill.m5_spring_2026.configuration;
+package pt.upskill.VHS.configuration;
 
 import jakarta.servlet.DispatcherType;
 import org.springframework.beans.factory.annotation.Autowired;

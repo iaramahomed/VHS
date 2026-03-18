@@ -1,13 +1,13 @@
-package pt.upskill.m5_spring_2026.services;
+package pt.upskill.VHS.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import pt.upskill.m5_spring_2026.entities.User;
-import pt.upskill.m5_spring_2026.models.SignUpModel;
-import pt.upskill.m5_spring_2026.repositories.UserRepository;
+import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.models.SignUpModel;
+import pt.upskill.VHS.repositories.UserRepository;
 
 @Service
 public class AuthService {
