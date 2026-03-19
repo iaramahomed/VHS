@@ -1,0 +1,1 @@
+The main goal of this project is to develop a web and mobile application to manage a video club, enabling both digital consumption and physical rental of films and related equipment on a single platform.
