@@ -29,7 +29,7 @@ public class AuthService {
     }
 
     public User getUser(String email) {
-        return userRepository.getUserByUsername(email);
+        return userRepository.getUserByEmail(email);
     }
 
     public User validateLogin(String email, String password) {
@@ -50,7 +50,7 @@ public class AuthService {
         if (auth == null || auth.getPrincipal() == null) {
             return null;
         }
-        String username = auth.getPrincipal().toString();
-        return getUser(username);
+        String email = auth.getPrincipal().toString();
+        return getUser(email);
     }
 }

@@ -1,8 +1,10 @@
 package pt.upskill.VHS.models;
 
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 public class SignUpModel {
+    @Id
     @GeneratedValue
     private Long id;
 

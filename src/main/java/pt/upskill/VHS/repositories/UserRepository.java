@@ -6,5 +6,5 @@ import pt.upskill.VHS.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User getUserByUsername(String username);
+    User getUserByEmail(String email);
 }
