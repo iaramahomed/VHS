@@ -10,14 +10,19 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-<div class="login-container">
-    <div class="logo-section">
-        <img src="/images/Logo_v4.svg" alt="VHS Logo" class="logo-img">
+<div class="logout-box">
+    <div class="logo-logout-section">
+        <img src="/images/Logo_v4.svg" alt="VHS Logo" class="logo-img" width="200">
     </div>
 
-    <div class="button-container">
-        <button class="btn-login" onclick="window.location.href='/'">Logout</button>
+    <div class ="logout-container">
+    <h2 class="logout-text">Logout successful!</h2>
+    <p>See you next time.</p>
 
+    <div class="button-container">
+        <button class="btn-logout" onclick="window.location.href='/'">Back to login</button>
+
+    </div>
     </div>
 </div>
 </body>

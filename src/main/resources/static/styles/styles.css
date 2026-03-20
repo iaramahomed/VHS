@@ -24,7 +24,7 @@ body {
 }
 
 button {
-    padding: 20px 0;
+    padding: 10px 0;
     border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
@@ -42,11 +42,26 @@ button:active {
     color: #ffffff;
     border-radius: 10px;
     border: none !important;
+
 }
 
 .btn-login:hover {
     background-color: #35291e;
 }
+
+
+.btn-logout {
+    background-color: #493628;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none !important;
+}
+
+.btn-logout:hover {
+    background-color: #35291e;
+}
+
+
 
 .btn-create {
     background-color: transparent;
@@ -64,6 +79,25 @@ button:active {
     width: 100%;
     max-width: 400px;
     padding: 20px;
+}
+
+.logout-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+
+}
+
+.logout-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #493628;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
 }
 
 .welcome-text {
