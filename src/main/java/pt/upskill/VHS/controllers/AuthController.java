@@ -14,6 +14,10 @@ import pt.upskill.VHS.services.AuthService;
 public class AuthController {
     @Autowired
     AuthService authService;
+    @GetMapping(value = "/")
+    public String introPage() {
+        return "intro";
+    }
 
     @GetMapping(value = "/login")
     public String loginPage() {
