@@ -23,6 +23,7 @@ public class SecurityWebConfig {
             auth.requestMatchers("/auth/**", "/styles/**", "/WEB-INF/**").permitAll();
             auth.requestMatchers("/styles/**", "/scripts/**", "/images/**").permitAll();
             auth.requestMatchers("/forgotpass").permitAll();
+            auth.requestMatchers("/resetpass").permitAll();
             auth.requestMatchers("/**").denyAll();
         });
         httpSecurity.formLogin(login -> {

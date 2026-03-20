@@ -20,7 +20,6 @@ public class AuthController {
         return "login";
     }
 
-
     @GetMapping(value = "/signup")
     public String signUpPage() {
         return "signup";
@@ -36,5 +35,11 @@ public class AuthController {
     public String forgotPassPage() {
         return "forgotpass";
     }
+
+    @GetMapping(value = "/resetpass")
+    public String resetPassPage() {
+        return "resetpass";
+    }
+
 
 }
