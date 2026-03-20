@@ -7,35 +7,57 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
-<body>
-<div class="container">
-    <div class="card mt-4">
-        <div class="card-header">
-            <h2>Login</h2>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="login-box">
+    <h2 class="welcome-text">Hi, Welcome!</h2>
+
+    <form action="/perform_login" method="POST">
+        <div class="input-group-custom">
+            <label>Email address</label>
+            <input type="email" placeholder="Your email" required>
         </div>
-        <div class="card-body">
-            <form method="POST" action="/login">
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="O seu username">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="O seu username">
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-primary">
-                        Login
-                    </button>
-                </div>
-            </form>
+
+        <div class="input-group-custom">
+            <label>Password</label>
+            <div class="password-wrapper">
+                <input type="password" placeholder="Password" id="passInput" required>
+                <span class="toggle-password" id="toggleText" onclick="togglePassword()">👁️</span>
+            </div>
         </div>
-    </div>
+
+        <div class="form-options">
+            <label class="remember-me">
+                <input type="checkbox" checked>
+                <span class="checkmark"></span>
+                Remember me
+            </label>
+            <a href="/forgotpass" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button class="btn-login mb-4" onclick="window.location.href='/home'">Login</button>
+
+        <p class="signup-text">
+            Don't have an account? <a href="signup" class="login-link">Sign up</a>
+        </p>
+    </form>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('passInput');
+        const toggleText = document.getElementById('toggleText');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleText.innerHTML = '🙈';
+        } else {
+            passwordInput.type = 'password';
+            toggleText.innerHTML = '👁️';
+        }
+    }
+</script>
+
 </body>
 </html>

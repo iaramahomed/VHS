@@ -7,39 +7,69 @@
     <link rel="stylesheet" href="/styles/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
-<body>
-<div class="container">
-    <div class="card mt-4">
-        <div class="card-header">
-            <h2>Registo de Utilizador</h2>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="login-box">
+    <h2 class="welcome-text">Create account</h2>
+
+    <form action="/perform_register" method="POST">
+
+        <div class="input-group-custom">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required>
         </div>
-        <div class="card-body">
-            <form method="POST" action="/auth/signUpAction">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="O seu nome">
-                </div>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="O seu username">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="O seu username">
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-primary">
-                        Registar
-                    </button>
-                </div>
-            </form>
+
+        <div class="input-group-custom">
+            <label>Email</label>
+            <input type="email" placeholder="example@gmail.com" required>
         </div>
-    </div>
+
+        <div class="input-group-custom">
+            <label>Create a password</label>
+            <div class="password-wrapper">
+                <input type="password" placeholder="must be 15 characters" id="regPass" required>
+                <span class="toggle-password" onclick="togglePass('regPass', this)">👁️</span>
+            </div>
+        </div>
+
+        <div class="input-group-custom">
+            <label>Confirm password</label>
+            <div class="password-wrapper">
+                <input type="password" placeholder="repeat password" id="confirmPass" required>
+                <span class="toggle-password" onclick="togglePass('confirmPass', this)">👁️</span>
+            </div>
+
+            <%-- quero um pop up a dizer que as passwords nao fazem match --%>
+            <%-- POP UP PARA CONFIRMAÇÃO DE IDADE, MAIOR DE 18 --%>
+
+
+        </div>
+
+        <button type="submit" class="btn-login-submit" onclick="window.location.href='/login'" style="margin-top: 20px;">Create account</button>
+
+        <p class="signup-text">
+            Already have an account? <a href="/login" class="signup-link">Log in</a>
+        </p>
+    </form>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+<script>
+    function togglePass(inputId, element) {
+        const input = document.getElementById(inputId);
+        if (input.type === 'password') {
+            input.type = 'text';
+            element.innerHTML = '🙈';
+        } else {
+            input.type = 'password';
+            element.innerHTML = '👁️';
+        }
+    }
+</script>
+</body>
+
+
+</div>
 </body>
 </html>
