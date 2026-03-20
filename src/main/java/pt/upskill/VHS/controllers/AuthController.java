@@ -41,5 +41,11 @@ public class AuthController {
         return "resetpass";
     }
 
+    @GetMapping(value = "/logout")
+    public String logoutPage() {
+        return "logout";
+    }
+
+
 
 }
