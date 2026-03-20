@@ -19,7 +19,7 @@
     <h2 class="logout-text">Logout successful!</h2>
     <p>See you next time.</p>
 
-    <div class="button-container">
+    <div class="button-container1">
         <button class="btn-logout" onclick="window.location.href='/'">Back to login</button>
 
     </div>
