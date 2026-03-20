@@ -26,7 +26,8 @@ body {
 
 .button-container1 {
     display: flex;
-   justify-content: center;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 button {
