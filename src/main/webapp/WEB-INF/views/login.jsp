@@ -35,7 +35,7 @@
                 <span class="checkmark"></span>
                 Remember me
             </label>
-            <a href="/forgotpass" class="forgot-link">Forgot password?</a>
+            <a href="/auth/forgotpass" class="forgot-link">Forgot password?</a>
         </div>
 
         <button class="btn-login mb-4" onclick="window.location.href='/home'">Login</button>

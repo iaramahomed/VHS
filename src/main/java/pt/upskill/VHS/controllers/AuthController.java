@@ -32,4 +32,9 @@ public class AuthController {
         return "login";
     }
 
+    @GetMapping(value = "/forgotpass")
+    public String forgotPassPage() {
+        return "forgotpass";
+    }
+
 }
