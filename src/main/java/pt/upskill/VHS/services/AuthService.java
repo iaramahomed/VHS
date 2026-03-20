@@ -20,7 +20,7 @@ public class AuthService {
 
     public User register(SignUpModel signUpModel) {
         User user = new User();
-        user.setUsername(signUpModel.getUsername());
+        user.setEmail(signUpModel.getEmail());
 
         String encodedPassword = passwordEncoder.encode(signUpModel.getPassword());
         user.setPassword(encodedPassword);
@@ -28,12 +28,12 @@ public class AuthService {
         return userRepository.save(user);
     }
 
-    public User getUser(String username) {
-        return userRepository.getUserByUsername(username);
+    public User getUser(String email) {
+        return userRepository.getUserByUsername(email);
     }
 
-    public User validateLogin(String username, String password) {
-        User user = getUser(username);
+    public User validateLogin(String email, String password) {
+        User user = getUser(email);
         if (user == null || user.getId() == null) {
             return null;
         }
