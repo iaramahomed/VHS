@@ -1,9 +1,8 @@
 package pt.upskill.VHS.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Movie {
@@ -14,6 +13,9 @@ public class Movie {
 
     private String name;
     private int year;
+
+    @OneToMany(mappedBy = "rental")
+    private List<Rental_Movie> rentalMovie;
 
     public Long getId() {
         return id;
@@ -39,4 +41,11 @@ public class Movie {
         this.year = year;
     }
 
+    public List<Rental_Movie> getRentalMovie() {
+        return rentalMovie;
+    }
+
+    public void setRentalMovie(List<Rental_Movie> rentalMovie) {
+        this.rentalMovie = rentalMovie;
+    }
 }
