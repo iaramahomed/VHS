@@ -67,4 +67,28 @@ public class User {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(List<Rental> rentals) {
+        this.rentals = rentals;
+    }
+
+    public List<Fine> getFines() {
+        return fines;
+    }
+
+    public void setFines(List<Fine> fines) {
+        this.fines = fines;
+    }
+
+    public List<Reward> getRewards() {
+        return rewards;
+    }
+
+    public void setRewards(List<Reward> rewards) {
+        this.rewards = rewards;
+    }
 }
