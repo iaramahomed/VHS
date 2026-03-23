@@ -14,7 +14,7 @@ public class Movie {
     private String name;
     private int year;
 
-    @OneToMany(mappedBy = "rental")
+    @OneToMany(mappedBy = "movie")
     private List<Rental_Movie> rentalMovie;
 
     public Long getId() {
