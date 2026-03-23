@@ -3,6 +3,7 @@ package pt.upskill.VHS.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
 
@@ -15,6 +16,9 @@ public class Rental {
 
     private LocalDate dateOfRent;
     private LocalDate dateOfReturn;
+
+    @ManyToOne
+    private User user;
 
 
     public Long getId() {

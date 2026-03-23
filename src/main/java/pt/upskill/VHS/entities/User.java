@@ -3,8 +3,10 @@ package pt.upskill.VHS.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class User {
@@ -16,6 +18,15 @@ public class User {
     private String email;
     private String password;
     private LocalDate dateOfBirth;
+
+    @OneToMany(mappedBy = "user")
+    private List <Rental> rentals;
+
+    @OneToMany(mappedBy = "user")
+    private List <Fine> fines;
+
+    @OneToMany(mappedBy = "user")
+    private List <Reward> rewards;
 
     public String getName() {
         return name;

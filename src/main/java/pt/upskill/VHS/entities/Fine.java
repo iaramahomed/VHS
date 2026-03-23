@@ -3,6 +3,7 @@ package pt.upskill.VHS.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Fine {
@@ -12,6 +13,9 @@ public class Fine {
     private long Id;
 
     private String type;
+
+    @ManyToOne
+    private User user;
 
     public long getId() {
         return Id;
