@@ -53,4 +53,8 @@ public class AuthService {
         String email = auth.getPrincipal().toString();
         return getUser(email);
     }
+
+    public void logout() {
+        //todo
+    }
 }
