@@ -1,11 +1,9 @@
 package pt.upskill.VHS.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Rental {
@@ -19,6 +17,9 @@ public class Rental {
 
     @ManyToOne
     private User user;
+
+    @OneToMany(mappedBy = "rental")
+    private List<Rental_Movie> rentalMovie;
 
 
     public Long getId() {
@@ -43,5 +44,21 @@ public class Rental {
 
     public void setDateOfReturn(LocalDate dateOfReturn) {
         this.dateOfReturn = dateOfReturn;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public List<Rental_Movie> getRentalMovie() {
+        return rentalMovie;
+    }
+
+    public void setRentalMovie(List<Rental_Movie> rentalMovie) {
+        this.rentalMovie = rentalMovie;
     }
 }
