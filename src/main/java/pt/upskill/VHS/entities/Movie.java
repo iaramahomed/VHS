@@ -15,6 +15,9 @@ public class Movie {
     private String name;
     private int year;
 
+    @ManyToOne
+    private movieFormat movieFormats;
+
     @ManyToMany
     @JoinTable(
             name = "rental_movie",
@@ -67,6 +70,14 @@ public class Movie {
         return rentals;
     }
 
+    public movieFormat getMovieFormats() {
+        return movieFormats;
+    }
+
+    public void setMovieFormats(movieFormat movieFormats) {
+        this.movieFormats = movieFormats;
+    }
+
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
@@ -86,4 +97,7 @@ public class Movie {
     public void setDirectors(List<Director> directors) {
         this.directors = directors;
     }
+
+
+
 }
