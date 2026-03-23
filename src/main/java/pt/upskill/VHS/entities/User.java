@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+
 @Entity
 public class User {
     @Id
@@ -13,6 +15,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private LocalDate dateOfBirth;
 
     public String getName() {
         return name;
@@ -44,5 +47,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
