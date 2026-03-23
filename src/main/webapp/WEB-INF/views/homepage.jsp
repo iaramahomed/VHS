@@ -53,9 +53,9 @@
 
 
         <div class="categories">
-            <a href="/vhs" class="category-card">VHS</a>
-            <a href="/dvd" class="category-card">DVD</a>
-            <a href="/digital" class="category-card">DIGITAL</a>
+            <a href="/vhs" class="category-image"><img src="/images/VHS_botao.svg"></a>
+            <a href="/dvd" class="category-image"><img src="/images/DVD_1.svg"></a>
+            <a href="/digital" class="category-image"><img src="/images/VHS_botao.svg"></a>
         </div>
 
     </div>
