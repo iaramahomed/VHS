@@ -3,6 +3,10 @@ package pt.upskill.VHS.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Actor {
@@ -12,6 +16,9 @@ public class Actor {
     private Long id;
 
     private String name;
+
+    @ManyToMany(mappedBy = "actors")
+    private List<Movie> movies = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -27,6 +34,14 @@ public class Actor {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
     }
 
 }
