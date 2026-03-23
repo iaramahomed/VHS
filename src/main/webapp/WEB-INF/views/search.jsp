@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Search</title>
     <link rel="icon" type="image/x-icon" href="/images/FavIcon.svg">
     <link rel="stylesheet" href="/styles/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,9 +51,13 @@
         <a href="auth/logout" class="btn-logouthomepage">Logout</a>
     </div>
 
-    <div>
-        <h6 class="page-title">Hello user! What do you want to watch today?</h6>
-        <input type="text" class="search-bar" placeholder="Search">
+    <div class="search-field">
+
+        <h2 class="welcome-text">
+            Hello user! What do you want to watch today?
+        </h2>
+
+        <input class="search-bar" placeholder="Search movies...">
 
     </div>
 
