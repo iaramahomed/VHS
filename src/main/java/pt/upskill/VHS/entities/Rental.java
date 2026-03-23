@@ -21,7 +21,6 @@ public class Rental {
     @OneToMany(mappedBy = "rental")
     private List<Rental_Movie> rentalMovie;
 
-
     public Long getId() {
         return id;
     }
