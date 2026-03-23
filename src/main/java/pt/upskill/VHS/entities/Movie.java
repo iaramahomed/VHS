@@ -23,6 +23,14 @@ public class Movie {
     )
     private List<Rental> rentals = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "actor_movie",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id")
+    )
+    private List<Actor> actors = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
@@ -54,4 +62,13 @@ public class Movie {
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
+
+    public List<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
+    }
+
 }
