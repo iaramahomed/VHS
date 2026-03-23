@@ -1,9 +1,6 @@
 package pt.upskill.VHS.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,7 +8,7 @@ import java.util.List;
 @Entity
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -27,6 +24,9 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List <Reward> rewards;
+
+    public User() {
+    }
 
     public String getName() {
         return name;

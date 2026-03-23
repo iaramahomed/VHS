@@ -3,14 +3,16 @@ package pt.upskill.VHS.models;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-public class SignUpModel {
-    @Id
-    @GeneratedValue
-    private Long id;
+import java.time.LocalDate;
 
+public class SignUpModel {
+
+    private Long id;
     private String name;
     private String email;
     private String password;
+    private LocalDate dateOfBirth;
+
 
     public String getName() {
         return name;
@@ -43,6 +45,15 @@ public class SignUpModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
 }
 
 

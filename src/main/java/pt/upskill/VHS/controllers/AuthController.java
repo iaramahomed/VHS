@@ -3,10 +3,12 @@ package pt.upskill.VHS.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pt.upskill.VHS.entities.User;
 import pt.upskill.VHS.models.SignUpModel;
+import pt.upskill.VHS.repositories.UserRepository;
 import pt.upskill.VHS.services.AuthService;
 
 @Controller
@@ -14,6 +16,9 @@ import pt.upskill.VHS.services.AuthService;
 public class AuthController {
     @Autowired
     AuthService authService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping(value = "/login")
     public String loginPage() {
@@ -25,9 +30,11 @@ public class AuthController {
         return "signup";
     }
 
-    @PostMapping(value = "/signUpAction")
-    public String signUpAction(SignUpModel signUp) {
-        User user = authService.register(signUp);
+    @PostMapping(value ="/signUpAction")
+    public String signUpAction(SignUpModel signUpModel) {
+
+        User user = authService.register(signUpModel);
+
         return "login";
     }
 

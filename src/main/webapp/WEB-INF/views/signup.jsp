@@ -15,30 +15,35 @@
 <div class="login-box">
     <h2 class="welcome-text">Create account</h2>
 
-    <form action="/perform_register" method="POST">
+    <form action="/auth/signUpAction" method="POST">
 
         <div class="input-group-custom">
-            <label>Name</label>
-            <input type="text" placeholder="Your name" required>
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
         </div>
 
         <div class="input-group-custom">
-            <label>Email</label>
-            <input type="email" placeholder="example@gmail.com" required>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
         </div>
 
         <div class="input-group-custom">
-            <label>Create a password</label>
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="14-01-1994"required>
+        </div>
+
+        <div class="input-group-custom">
+            <label for="password" class="form-label">Create a password</label>
             <div class="password-wrapper">
-                <input type="password" placeholder="must be 15 characters" id="regPass" required>
+                <input type="password" class="form-control" name="password" placeholder="must be 15 characters" id="regPass" required>
                 <span class="toggle-password" onclick="togglePass('regPass', this)">👁️</span>
             </div>
         </div>
 
         <div class="input-group-custom">
-            <label>Confirm password</label>
+            <label for="password" class="form-label">Confirm password</label>
             <div class="password-wrapper">
-                <input type="password" placeholder="repeat password" id="confirmPass" required>
+                <input type="password" class="form-control" name="password" placeholder="repeat password" id="confirmPass" required>
                 <span class="toggle-password" onclick="togglePass('confirmPass', this)">👁️</span>
             </div>
 
@@ -48,8 +53,7 @@
 
         </div>
 
-        <button type="submit" class="btn-login-submit" onclick="window.location.href='/login'" style="margin-top: 20px;">Create account</button>
-
+        <button type="submit" class="btn-login-submit" style="margin-top: 20px;">Create account</button>
         <p class="signup-text">
             Already have an account? <a href="/login" class="signup-link">Log in</a>
         </p>
