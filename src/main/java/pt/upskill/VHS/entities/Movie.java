@@ -79,4 +79,11 @@ public class Movie {
         this.actors = actors;
     }
 
+    public List<Director> getDirectors() {
+        return directors;
+    }
+
+    public void setDirectors(List<Director> directors) {
+        this.directors = directors;
+    }
 }
