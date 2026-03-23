@@ -31,6 +31,14 @@ public class Movie {
     )
     private List<Actor> actors = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "director_movie",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "director_id")
+    )
+    private List<Director> directors = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
