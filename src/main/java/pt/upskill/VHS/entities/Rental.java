@@ -3,6 +3,7 @@ package pt.upskill.VHS.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,8 +19,8 @@ public class Rental {
     @ManyToOne
     private User user;
 
-    @OneToMany(mappedBy = "rental")
-    private List<Rental_Movie> rentalMovie;
+    @ManyToMany(mappedBy = "rentals")
+    private List<Movie> movies = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -53,11 +54,12 @@ public class Rental {
         this.user = user;
     }
 
-    public List<Rental_Movie> getRentalMovie() {
-        return rentalMovie;
+    public List<Movie> getMovies() {
+        return movies;
     }
 
-    public void setRentalMovie(List<Rental_Movie> rentalMovie) {
-        this.rentalMovie = rentalMovie;
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
     }
+
 }
