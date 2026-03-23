@@ -23,8 +23,8 @@
     <div class="menu-section">
         <p class="menu-title">Discover</p>
 
-        <button class="menu-btn">🏠 Home</button>
-        <button class="menu-btn">🔍 Browse</button>
+        <a href="/homepage"><button class="menu-btn">🏠 Home</button></a>
+        <a href="/search"><button class="menu-btn">🔍 Browse</button></a>
     </div>
 
     <div class="menu-section">
@@ -37,14 +37,29 @@
 
     <button class="help-btn">Help</button>
 
-    <div class="main-content">
+</div>
 
-        <h1 class="main-title">VHS</h1>
+<div class="main-content">
+    <div class="top-bar">
+        <div class="nav-links">
+            <a href="auth/homepage">Home</a>
+            <a href="auth/shop">Shop</a>
+            <a href="auth/faq">FAQ</a>
+            <a href="auth/contacts">Contacts</a>
+        </div>
+
+        <a href="auth/logout" class="btn-logouthomepage">Logout</a>
+    </div>
+
+    <div class="vhs">
+        <h1>VHS</h1>
 
     </div>
 
 
-
+</div>
 
 </body>
+
+
 </html>

@@ -42,10 +42,10 @@
     <div class="main-content">
         <div class="top-bar">
             <div class="nav-links">
-                <a href="auth/homepage">Home</a>
-                <a href="auth/shop">Shop</a>
-                <a href="auth/faq">FAQ</a>
-                <a href="auth/contacts">Contacts</a>
+                <a href="homepage">Home</a>
+                <a href="shop">Shop</a>
+                <a href="faq">FAQ</a>
+                <a href="contacts">Contacts</a>
             </div>
 
             <a href="auth/logout" class="btn-logouthomepage">Logout</a>
@@ -57,8 +57,25 @@
             <a href="/dvd" class="category-image"><img src="/images/DVD_1.svg"></a>
             <a href="/digital" class="category-image"><img src="/images/VHS_botao.svg"></a>
         </div>
+        <div class="top-movies">
+            <h2 class="section-title">Top 10</h2>
 
+            <div class="movies-grid">
+                <div class="movie-img">Filme 1</div>
+                <div class="movie-img">Filme 2</div>
+                <div class="movie-img">Filme 3</div>
+                <div class="movie-img">Filme 4</div>
+                <div class="movie-img">Filme 5</div>
+                <div class="movie-img">Filme 6</div>
+                <div class="movie-img">Filme 7</div>
+                <div class="movie-img">Filme 8</div>
+                <div class="movie-img">Filme 9</div>
+                <div class="movie-img">Filme 10</div>
+            </div>
+        </div>
     </div>
+
+
 
 </body>
 </html>
