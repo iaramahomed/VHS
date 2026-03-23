@@ -8,6 +8,8 @@ import java.util.List;
 @Entity
 public class Movie {
 
+    //FALTA CRIAR A LIGAÇÃO ENTRE O MOVIEFORMAT E AS DÉCADAS
+
     @Id
     @GeneratedValue
     private Long id;
