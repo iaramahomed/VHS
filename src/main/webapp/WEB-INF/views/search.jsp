@@ -11,8 +11,57 @@
     <link rel="stylesheet" href="/styles/pages.css">
 
 </head>
-<body>
-    <h6 class="page-title">Hello user! What do you want to watch today?</h6>
-    <input type="text" class="search-bar" placeholder="Search">
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="sidebar">
+
+    <div class="logo-box">
+        <img src="/images/Logo_v4.svg" alt="logo">
+    </div>
+
+    <div class="menu-section">
+        <p class="menu-title">Discover</p>
+
+        <a href="/homepage"><button class="menu-btn">🏠 Home</button></a>
+        <a href="/search"><button class="menu-btn">🔍 Browse</button></a>
+    </div>
+
+    <div class="menu-section">
+        <p class="menu-title">Account</p>
+
+        <button class="menu-btn">📋 Lists</button>
+        <button class="menu-btn">❤️ Favorites</button>
+        <button class="menu-btn">⚙️ Settings</button>
+    </div>
+
+    <button class="help-btn">Help</button>
+
+</div>
+
+<div class="main-content">
+    <div class="top-bar">
+        <div class="nav-links">
+            <a href="auth/homepage">Home</a>
+            <a href="auth/shop">Shop</a>
+            <a href="auth/faq">FAQ</a>
+            <a href="auth/contacts">Contacts</a>
+        </div>
+
+        <a href="auth/logout" class="btn-logouthomepage">Logout</a>
+    </div>
+
+    <div>
+        <h6 class="page-title">Hello user! What do you want to watch today?</h6>
+        <input type="text" class="search-bar" placeholder="Search">
+
+    </div>
+
+
+</div>
+
 </body>
 </html>
+
+
+
