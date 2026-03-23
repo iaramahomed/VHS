@@ -17,7 +17,7 @@ public class Genre {
 
     private String name;
 
-    @ManyToMany(mappedBy = "movies")
+    @ManyToMany(mappedBy = "genres")
     private List<Movie> movies = new ArrayList<>();
 
     public Long getId() {
