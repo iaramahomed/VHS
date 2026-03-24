@@ -30,7 +30,6 @@
         <div class="menu-section">
             <p class="menu-title">Account</p>
 
-            <button class="menu-btn">📋 Lists</button>
             <button class="menu-btn">❤️ Favorites</button>
             <button class="menu-btn">⚙️ Settings</button>
         </div>
