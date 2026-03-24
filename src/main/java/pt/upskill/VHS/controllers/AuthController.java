@@ -1,12 +1,14 @@
 package pt.upskill.VHS.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.models.LoginModel;
 import pt.upskill.VHS.models.SignUpModel;
 import pt.upskill.VHS.repositories.UserRepository;
 import pt.upskill.VHS.services.AuthService;
@@ -23,6 +25,14 @@ public class AuthController {
     @GetMapping(value = "/login")
     public String loginPage() {
         return "login";
+    }
+
+    @PostMapping(value ="/loginAction")
+    public String loginAction(LoginModel loginModel) {
+
+        User user = authService.validateLogin(loginModel.getEmail(), loginModel.getPassword());
+
+        return "homepage";
     }
 
     @GetMapping(value = "/signup")

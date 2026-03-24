@@ -47,9 +47,6 @@
                 <span class="toggle-password" onclick="togglePass('confirmPass', this)">👁️</span>
             </div>
 
-            <%-- quero um pop up a dizer que as passwords nao fazem match --%>
-            <%-- POP UP PARA CONFIRMAÇÃO DE IDADE, MAIOR DE 18 --%>
-
 
         </div>
 

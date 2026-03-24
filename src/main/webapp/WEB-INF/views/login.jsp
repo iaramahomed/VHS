@@ -12,10 +12,12 @@
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
 
+
 <div class="login-box">
     <h2 class="welcome-text">Hi, Welcome!</h2>
 
-    <form action="/perform_login" method="POST">
+    <form action="/auth/loginAction" method="POST">
+
         <div class="input-group-custom">
             <label>Email address</label>
             <input type="email" placeholder="Your email" required>
@@ -38,7 +40,7 @@
             <a href="/auth/forgotpass" class="forgot-link">Forgot password?</a>
         </div>
 
-        <button class="btn-login mb-4" onclick="window.location.href='/home'">Login</button>
+        <button class="btn-login mb-4" onclick="window.location.href='/login'">Login</button>
 
         <p class="signup-text">
             Don't have an account? <a href="signup" class="login-link">Sign up</a>

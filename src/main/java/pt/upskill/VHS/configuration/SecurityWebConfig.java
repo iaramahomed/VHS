@@ -22,11 +22,11 @@ public class SecurityWebConfig {
             auth.requestMatchers("/").permitAll();
             auth.requestMatchers("/auth/**", "/styles/**", "/WEB-INF/**").permitAll();
             auth.requestMatchers("/styles/**", "/scripts/**", "/images/**").permitAll();
+            auth.requestMatchers("/homepage").permitAll();
             auth.requestMatchers("/contacts").permitAll();
             auth.requestMatchers("/digital").permitAll();
             auth.requestMatchers("/dvd").permitAll();
             auth.requestMatchers("/faq").permitAll();
-            auth.requestMatchers("/homepage").permitAll();
             auth.requestMatchers("/search").permitAll();
             auth.requestMatchers("/shop").permitAll();
             auth.requestMatchers("/vhs").permitAll();
