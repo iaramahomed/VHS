@@ -235,6 +235,7 @@ a:active {
 .form-control{
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 12px;
-
+    border-color:#493628;
+    background-color: white;
 }
 
