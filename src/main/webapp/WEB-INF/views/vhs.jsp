@@ -49,15 +49,12 @@
         <a href="auth/logout" class="btn-logouthomepage">Logout</a>
     </div>
 
-    <div class="vhs">
-        <h1>VHS</h1>
+    <div class="genre">
+        <h2>VHS</h2>
 
     </div>
 
 
 </div>
-
 </body>
-
-
 </html>

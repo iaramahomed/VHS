@@ -223,5 +223,10 @@ a:active {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-
+.genre {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #493628;
+}
 
