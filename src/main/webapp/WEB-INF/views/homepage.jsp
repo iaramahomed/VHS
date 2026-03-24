@@ -61,16 +61,17 @@
             <h2 class="section-title">Top 10</h2>
 
             <div class="movies-grid">
-                <div class="movie-img">Filme 1</div>
-                <div class="movie-img">Filme 2</div>
-                <div class="movie-img">Filme 3</div>
-                <div class="movie-img">Filme 4</div>
-                <div class="movie-img">Filme 5</div>
-                <div class="movie-img">Filme 6</div>
-                <div class="movie-img">Filme 7</div>
-                <div class="movie-img">Filme 8</div>
-                <div class="movie-img">Filme 9</div>
-                <div class="movie-img">Filme 10</div>
+                <div class="movie-img"> <img src="/images/80s/01_The Empire Strikes Back.jpg"></div>
+                <div class="movie-img"> <img src="/images/80s/02_Back to the future.jpg"></div>
+                <div class="movie-img"> <img src="/images/90s/01_The Shawshank Redemption.jpg"></div>
+                <div class="movie-img"> <img src="/images/90s/02_Schindler’s List.jpg"></div>
+                <div class="movie-img"> <img src="/images/2000_2010/01_The Lord of the Rings- The Return of the King.jpg"></div>
+                <div class="movie-img"> <img src="/images/2000_2010/02_The Dark Knight.jpg"></div>
+                <div class="movie-img"> <img src="/images/2010_2020/01_Inception.jpg"></div>
+                <div class="movie-img"> <img src="/images/2010_2020/02_Interstellar.jpg"></div>
+                <div class="movie-img"> <img src="/images/2020_2025/01_Dune- Part Two.jpg"></div>
+                <div class="movie-img"> <img src="/images/2020_2025/02_Spider-Man- Across the Spider-Verse.jpg"></div>
+
             </div>
         </div>
     </div>

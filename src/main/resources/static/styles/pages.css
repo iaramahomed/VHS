@@ -184,7 +184,6 @@ a:active {
 .movie-img{
     width: 160px;
     height: 220px;
-    background-color: #493628;
     border-radius: 12px;
     display: flex;
     align-items: flex-end;
