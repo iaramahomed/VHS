@@ -30,6 +30,7 @@ public class SecurityWebConfig {
             auth.requestMatchers("/search").permitAll();
             auth.requestMatchers("/shop").permitAll();
             auth.requestMatchers("/vhs").permitAll();
+            auth.requestMatchers("/logout").permitAll();
             auth.requestMatchers("/**").denyAll();
         });
         httpSecurity.formLogin(login -> {
@@ -38,6 +39,12 @@ public class SecurityWebConfig {
             login.usernameParameter("email");
             login.defaultSuccessUrl("/homepage");
         });
+        httpSecurity.logout(logout -> {
+            logout.logoutUrl("/logout");
+            logout.logoutSuccessUrl("/auth/logout");
+            logout.permitAll();
+        });
+
         httpSecurity.authenticationProvider(userAuthenticationProvider);
         return httpSecurity.build();
     }

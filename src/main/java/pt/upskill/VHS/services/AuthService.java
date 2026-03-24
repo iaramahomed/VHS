@@ -6,6 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.exceptions.EmailAlreadyExistsException;
 import pt.upskill.VHS.exceptions.PasswordMismatchException;
 import pt.upskill.VHS.models.SignUpModel;
 import pt.upskill.VHS.repositories.UserRepository;
@@ -23,7 +24,9 @@ public class AuthService {
         User user = new User();
         user.setName(signUpModel.getName());
 
-        // criar uma exceção para bloquear a criaçao de conta com emails que já existam
+        if (userRepository.getUserByEmail(signUpModel.getEmail()) != null) {
+            throw new EmailAlreadyExistsException("An account already exists for this email.");
+        }
 
         user.setEmail(signUpModel.getEmail());
         user.setDateOfBirth(signUpModel.getDateOfBirth());
