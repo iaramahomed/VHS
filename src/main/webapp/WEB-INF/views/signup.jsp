@@ -48,9 +48,10 @@
                 <span class="toggle-password" onclick="togglePass('confirmPass', this)">👁️</span>
             </div>
 
-            <c:if test="${error != null}">
+           <center> <c:if test="${error != null}">
                 <p>${error}</p>
             </c:if>
+           </center>
         </div>
 
         <button type="submit" class="btn-login-submit" style="margin-top: 20px;">Create account</button>
