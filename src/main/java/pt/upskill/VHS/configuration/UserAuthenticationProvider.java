@@ -28,11 +28,6 @@ public class UserAuthenticationProvider implements AuthenticationProvider {
 
         if (user != null) {
             List<GrantedAuthority> roleList = new ArrayList<>();
-            /*if(utilizador.isAdmin()) {
-                roleList.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-            }*/
-            //ALternativa:
-            //roleList.add(new SimpleGrantedAuthority("ROLE_" + utilizador.getRole()));
 
             roleList.add(new SimpleGrantedAuthority("ROLE_USER"));
 
