@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import pt.upskill.VHS.entities.User;
 import pt.upskill.VHS.exceptions.EmailAlreadyExistsException;
 import pt.upskill.VHS.exceptions.PasswordMismatchException;
+import pt.upskill.VHS.exceptions.UnderAgeException;
 import pt.upskill.VHS.models.SignUpModel;
 import pt.upskill.VHS.repositories.UserRepository;
 
@@ -33,6 +34,11 @@ public class AuthService {
 
         if(!signUpModel.getPassword().equals(signUpModel.getConfirmPassword())) {
             throw new PasswordMismatchException("Passwords don't match");
+        }
+
+        long years = java.time.temporal.ChronoUnit.YEARS.between(user.getDateOfBirth(), java.time.LocalDate.now());
+        if (years < 18) {
+            throw new UnderAgeException("You must be over 18 to register.");
         }
 
         String encodedPassword = passwordEncoder.encode(signUpModel.getPassword());
