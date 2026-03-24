@@ -19,17 +19,17 @@ public class HomeController {
 
     @GetMapping("/contacts")
     public String contactsPage() {
-        return "contactspage";
+        return "contacts";
     }
 
     @GetMapping("/faq")
     public String faqPage() {
-        return "faqpage";
+        return "faq";
     }
 
     @GetMapping("/shop")
     public String shopPage() {
-        return "shoppage";
+        return "shop";
     }
 
     @GetMapping("/vhs")
