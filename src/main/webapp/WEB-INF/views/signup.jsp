@@ -36,7 +36,7 @@
         <div class="input-group-custom">
             <label for="password" class="form-label">Create a password</label>
             <div class="password-wrapper">
-                <input type="password" class="form-control" name="password" placeholder="must be 15 characters" id="regPass" required>
+                <input type="password" class="form-control" name="password" placeholder="insert password" id="regPass" required>
                 <span class="toggle-password" onclick="togglePass('regPass', this)">👁️</span>
             </div>
         </div>
