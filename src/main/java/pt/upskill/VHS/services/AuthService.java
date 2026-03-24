@@ -67,7 +67,4 @@ public class AuthService {
         return getUser(email);
     }
 
-    public void logout() {
-        //todo
-    }
 }
