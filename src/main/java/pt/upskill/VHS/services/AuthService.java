@@ -23,7 +23,7 @@ public class AuthService {
         User user = new User();
         user.setName(signUpModel.getName());
 
-
+        // criar uma exceção para bloquear a criaçao de conta com emails que já existam
 
         user.setEmail(signUpModel.getEmail());
         user.setDateOfBirth(signUpModel.getDateOfBirth());
