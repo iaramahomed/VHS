@@ -11,6 +11,7 @@ public class SignUpModel {
     private String name;
     private String email;
     private String password;
+    private String confirmPassword;
     private LocalDate dateOfBirth;
 
 
@@ -44,6 +45,14 @@ public class SignUpModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 
     public LocalDate getDateOfBirth() {

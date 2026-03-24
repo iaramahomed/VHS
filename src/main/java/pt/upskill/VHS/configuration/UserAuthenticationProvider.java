@@ -21,17 +21,17 @@ public class UserAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getName();
+        String email = authentication.getName();
         String password = authentication.getCredentials().toString();
 
-        User user = authService.validateLogin(username, password);
+        User user = authService.validateLogin(email, password);
 
         if (user != null) {
             List<GrantedAuthority> roleList = new ArrayList<>();
 
             roleList.add(new SimpleGrantedAuthority("ROLE_USER"));
 
-            return new UsernamePasswordAuthenticationToken(username, password, roleList);
+            return new UsernamePasswordAuthenticationToken(email, password, roleList);
         }
 
         return null;

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +17,17 @@
 <div class="login-box">
     <h2 class="welcome-text">Hi, Welcome!</h2>
 
-    <form action="/auth/loginAction" method="POST">
+    <form action="/auth/login" method="POST">
 
         <div class="input-group-custom">
             <label>Email address</label>
-            <input type="email" placeholder="Your email" required>
+            <input type="email" name="email" placeholder="Your email" required>
         </div>
 
         <div class="input-group-custom">
             <label>Password</label>
             <div class="password-wrapper">
-                <input type="password" placeholder="Password" id="passInput" required>
+                <input type="password" placeholder="Password" id="passInput" name="password" required>
                 <span class="toggle-password" id="toggleText" onclick="togglePassword()">👁️</span>
             </div>
         </div>
@@ -40,7 +41,7 @@
             <a href="/auth/forgotpass" class="forgot-link">Forgot password?</a>
         </div>
 
-        <button class="btn-login mb-4" onclick="window.location.href='/login'">Login</button>
+        <button class="btn-login mb-4">Login</button>
 
         <p class="signup-text">
             Don't have an account? <a href="signup" class="login-link">Sign up</a>

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +44,13 @@
         <div class="input-group-custom">
             <label for="password" class="form-label">Confirm password</label>
             <div class="password-wrapper">
-                <input type="password" class="form-control" name="password" placeholder="repeat password" id="confirmPass" required>
+                <input type="password" class="form-control" name="confirmPassword" placeholder="repeat password" id="confirmPass" required>
                 <span class="toggle-password" onclick="togglePass('confirmPass', this)">👁️</span>
             </div>
 
-
+            <c:if test="${error != null}">
+                <p>${error}</p>
+            </c:if>
         </div>
 
         <button type="submit" class="btn-login-submit" style="margin-top: 20px;">Create account</button>

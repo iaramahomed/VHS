@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 import pt.upskill.VHS.entities.User;
-import pt.upskill.VHS.models.LoginModel;
 import pt.upskill.VHS.models.SignUpModel;
 import pt.upskill.VHS.repositories.UserRepository;
 import pt.upskill.VHS.services.AuthService;
@@ -27,25 +27,22 @@ public class AuthController {
         return "login";
     }
 
-    @PostMapping(value ="/loginAction")
-    public String loginAction(LoginModel loginModel) {
-
-        User user = authService.validateLogin(loginModel.getEmail(), loginModel.getPassword());
-
-        return "homepage";
-    }
-
     @GetMapping(value = "/signup")
     public String signUpPage() {
         return "signup";
     }
 
     @PostMapping(value ="/signUpAction")
-    public String signUpAction(SignUpModel signUpModel) {
+    public ModelAndView signUpAction(SignUpModel signUpModel) {
+        try {
+            User user = authService.register(signUpModel);
+        } catch (Exception e) {
+            ModelAndView modelAndView = new ModelAndView("signup");
+            modelAndView.addObject("error", e.getMessage());
+            return modelAndView;
+        }
 
-        User user = authService.register(signUpModel);
-
-        return "login";
+        return new ModelAndView("redirect:/auth/login");
     }
 
     @GetMapping(value = "/forgotpass")

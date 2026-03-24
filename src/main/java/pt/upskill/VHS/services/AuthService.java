@@ -6,6 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pt.upskill.VHS.entities.User;
+import pt.upskill.VHS.exceptions.PasswordMismatchException;
 import pt.upskill.VHS.models.SignUpModel;
 import pt.upskill.VHS.repositories.UserRepository;
 
@@ -21,8 +22,15 @@ public class AuthService {
     public User register(SignUpModel signUpModel) {
         User user = new User();
         user.setName(signUpModel.getName());
+
+
+
         user.setEmail(signUpModel.getEmail());
         user.setDateOfBirth(signUpModel.getDateOfBirth());
+
+        if(!signUpModel.getPassword().equals(signUpModel.getConfirmPassword())) {
+            throw new PasswordMismatchException("Passwords don't match");
+        }
 
         String encodedPassword = passwordEncoder.encode(signUpModel.getPassword());
         user.setPassword(encodedPassword);
