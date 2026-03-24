@@ -57,7 +57,6 @@ public class AuthController {
 
     @GetMapping(value = "/logout")
     public String logoutPage() {
-        authService.logout();
         return "logout";
     }
 
