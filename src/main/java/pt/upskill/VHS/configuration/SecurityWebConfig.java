@@ -22,16 +22,16 @@ public class SecurityWebConfig {
             auth.requestMatchers("/", "/error").permitAll();
             auth.requestMatchers("/auth/**", "/styles/**", "/WEB-INF/**").permitAll();
             auth.requestMatchers("/styles/**", "/scripts/**", "/images/**").permitAll();
-            auth.requestMatchers("/homepage").permitAll();
-            auth.requestMatchers("/contacts").permitAll();
-            auth.requestMatchers("/digital").permitAll();
-            auth.requestMatchers("/dvd").permitAll();
-            auth.requestMatchers("/faq").permitAll();
-            auth.requestMatchers("/search").permitAll();
-            auth.requestMatchers("/shop").permitAll();
-            auth.requestMatchers("/vhs").permitAll();
-            auth.requestMatchers("/logout").permitAll();
-            auth.requestMatchers("/**").denyAll();
+            auth.requestMatchers("/homepage").authenticated();
+            auth.requestMatchers("/contacts").authenticated();
+            auth.requestMatchers("/digital").authenticated();
+            auth.requestMatchers("/dvd").authenticated();
+            auth.requestMatchers("/faq").authenticated();
+            auth.requestMatchers("/search").authenticated();
+            auth.requestMatchers("/shop").authenticated();
+            auth.requestMatchers("/vhs").authenticated();
+            auth.requestMatchers("/logout").authenticated();
+            auth.anyRequest().denyAll();
         });
         httpSecurity.formLogin(login -> {
             login.loginPage("/auth/login");
