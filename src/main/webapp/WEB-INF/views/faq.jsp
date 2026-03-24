@@ -44,10 +44,10 @@
 <div class="main-content">
     <div class="top-bar">
         <div class="nav-links">
-            <a href="homepage">Home</a>
-            <a href="shop">Shop</a>
-            <a href="faq">FAQ</a>
-            <a href="contacts">Contacts</a>
+            <a href="/homepage">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contacts">Contacts</a>
         </div>
 
         <form action="/logout" method="post">
