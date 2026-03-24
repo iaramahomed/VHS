@@ -17,7 +17,7 @@
     </div>
 
     <div class="button-container">
-        <button class="btn-login" onclick="window.location.href='/login'">Login</button>
+        <button class="btn-login" onclick="window.location.href='/auth/login'">Login</button>
 
         <button class="btn-create" onclick="window.location.href='/auth/signup'">Create account</button>
     </div>
