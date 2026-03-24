@@ -96,6 +96,10 @@
             <label for="exampleFormControlTextarea1" class="form-label">Any Question?</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
+        <div class="bottom-btn">
+                <button class="select-btn">Send</button>
+                <button class="select-btn">Cancel</button>
+        </div>
     </div>
 
 
