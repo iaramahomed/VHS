@@ -49,9 +49,8 @@
         <a href="auth/logout" class="btn-logouthomepage">Logout</a>
     </div>
 
-    <div class="genre">
-        <h2>DVD</h2>
-
+    <div class="top-movies">
+        <h2 class="section-title">DVD</h2>
     </div>
 
 

@@ -56,7 +56,23 @@
         </h2>
 
         <input class="search-bar" placeholder="Search movies...">
+    </div>
 
+    <div class="top-movie">
+        <h2 class="section-title">Search</h2>
+
+        <div class="movies-grid">
+            <div class="movie-img">Animção</div>
+            <div class="movie-img">Romance</div>
+            <div class="movie-img">Drama</div>
+            <div class="movie-img">Horror</div>
+            <div class="movie-img">Crime</div>
+            <div class="movie-img">Comedy</div>
+            <div class="movie-img">Fantasy</div>
+            <div class="movie-img">Sci-Fi</div>
+            <div class="movie-img">Musical</div>
+            <div class="movie-img">Western</div>
+        </div>
     </div>
 
 

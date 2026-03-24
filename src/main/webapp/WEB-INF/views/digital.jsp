@@ -49,9 +49,8 @@
         <a href="auth/logout" class="btn-logouthomepage">Logout</a>
     </div>
 
-    <div class="genre">
-        <h2>DIGITAL</h2>
-
+    <div class="top-movies">
+        <h2 class="section-title">DIGITAL</h2>
     </div>
 
 
