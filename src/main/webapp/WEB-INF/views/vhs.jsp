@@ -47,7 +47,9 @@
             <a href="auth/contacts">Contacts</a>
         </div>
 
-        <a href="auth/logout" class="btn-logouthomepage">Logout</a>
+        <form action="/logout" method="post">
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
     </div>
 
     <div class="top-movies">
