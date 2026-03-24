@@ -130,7 +130,7 @@ body {
 
 }
 
-.btn-logouthomepage{
+.btn-logout{
     text-decoration: none;
     color: white;
     background-color: #493628;
@@ -139,7 +139,7 @@ body {
 
 
 }
-.btn-logouthomepage:hover {
+.btn-logout:hover {
     background-color: #35291e;
     color: white ;
 }

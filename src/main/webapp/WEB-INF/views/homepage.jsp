@@ -48,10 +48,10 @@
                 <a href="/contacts">Contacts</a>
             </div>
 
-
             <form action="/logout" method="post">
-                <button type="submit" class="btn btn-danger">Logout</button>
+                <button type="submit" class="btn-logout">Logout</button>
             </form>
+
         </div>
 
 
