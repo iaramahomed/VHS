@@ -32,10 +32,11 @@ public class SecurityWebConfig {
             auth.anyRequest().authenticated();
         });
         httpSecurity.formLogin(login -> {
-            login.loginPage("/auth/login");
-            login.loginProcessingUrl("/auth/login");
-            login.usernameParameter("email");
-            login.defaultSuccessUrl("/homepage");
+            login.loginPage("/auth/login")
+                    .loginProcessingUrl("/auth/login")
+                    .usernameParameter("email")
+                    .defaultSuccessUrl("/homepage", true)
+                    .permitAll();
         });
         httpSecurity.logout(logout -> {
             logout.logoutUrl("/logout");
