@@ -19,7 +19,6 @@ public class SecurityWebConfig {
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
         httpSecurity.authorizeHttpRequests(auth -> {
             auth.dispatcherTypeMatchers(DispatcherType.FORWARD);
-            auth.requestMatchers("/", "/error").permitAll();
             auth.requestMatchers("/", "/error", "/auth/**", "/styles/**", "/scripts/**", "/images/**", "/WEB-INF/**").permitAll();
             auth.requestMatchers("/homepage").authenticated();
             auth.requestMatchers("/contacts").authenticated();
