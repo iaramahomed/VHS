@@ -20,8 +20,7 @@ public class SecurityWebConfig {
         httpSecurity.authorizeHttpRequests(auth -> {
             auth.dispatcherTypeMatchers(DispatcherType.FORWARD);
             auth.requestMatchers("/", "/error").permitAll();
-            auth.requestMatchers("/auth/**", "/styles/**", "/WEB-INF/**").permitAll();
-            auth.requestMatchers("/styles/**", "/scripts/**", "/images/**").permitAll();
+            auth.requestMatchers("/", "/error", "/auth/**", "/styles/**", "/scripts/**", "/images/**", "/WEB-INF/**").permitAll();
             auth.requestMatchers("/homepage").authenticated();
             auth.requestMatchers("/contacts").authenticated();
             auth.requestMatchers("/digital").authenticated();
@@ -31,7 +30,7 @@ public class SecurityWebConfig {
             auth.requestMatchers("/shop").authenticated();
             auth.requestMatchers("/vhs").authenticated();
             auth.requestMatchers("/logout").authenticated();
-            auth.anyRequest().denyAll();
+            auth.anyRequest().authenticated();
         });
         httpSecurity.formLogin(login -> {
             login.loginPage("/auth/login");
