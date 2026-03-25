@@ -58,7 +58,7 @@
         <div class="categories">
             <a href="/vhs" class="category-image"><img src="/images/VHS_botao.svg"></a>
             <a href="/dvd" class="category-image"><img src="/images/DVD_1.svg"></a>
-            <a href="/digital" class="category-image"><img src="/images/VHS_botao.svg"></a>
+            <a href="/digital" class="category-image"><img src="/images/Digital_botao.jpg"></a>
         </div>
         <div class="top-movies">
             <h2 class="section-title">Top 10</h2>
