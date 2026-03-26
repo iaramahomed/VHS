@@ -6,6 +6,8 @@ import pt.upskill.VHS.entities.Movie;
 import java.util.List;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
+
+    List<Movie> findByYearBetween(int startYear, int endYear);
     List<Movie> findByTitleContainingIgnoreCase(String title);
 
 }
