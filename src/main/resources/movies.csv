@@ -1,0 +1,51 @@
+Name;Year;Director;Actor1;Actor2;Actor3;Genre;ImagePath
+The Empire Strikes Back;1980;Irvin Kershner;Mark Hamill;Harrison Ford;Carrie Fisher;Sci-Fi;/images/movies/80s/01_The Empire Strikes Back.jpg
+Back to the Future;1985;Robert Zemeckis;Michael J. Fox;Christopher Lloyd;Lea Thompson;Sci-Fi;/images/movies/80s/02_Back to the future.jpg
+Cinema Paradiso;1988;Giuseppe Tornatore;Philippe Noiret;Enzo Cannavale;Antonella Attili;Drama;/images/movies/80s/03_Cinema Paradiso.jpg
+Grave of the Fireflies;1988;Isao Takahata;Tsutomu Tatsumi;Ayano Shiraishi;Yoshiko Shinohara;Animation;/images/movies/80s/04_Grave of the Fireflies.jpg
+Raiders of the Lost Ark;1981;Steven Spielberg;Harrison Ford;Karen Allen;Paul Freeman;Action;/images/movies/80s/05_Raiders of the Lost Ark.jpg
+Aliens;1986;James Cameron;Sigourney Weaver;Michael Biehn;Carrie Henn;Sci-Fi;/images/movies/80s/06_Aliens.jpg
+The Shining;1980;Stanley Kubrick;Jack Nicholson;Shelley Duvall;Danny Lloyd;Horror;/images/movies/80s/07_The Shining.jpg
+Scarface;1983;Brian De Palma;Al Pacino;Michelle Pfeiffer;Steven Bauer;Crime;/images/movies/80s/08_Scarface.jpg
+Die Hard;1988;John McTiernan;Bruce Willis;Alan Rickman;Bonnie Bedelia;Action;/images/movies/80s/09_Die Hard.jpg
+Blade Runner;1982;Ridley Scott;Harrison Ford;Rutger Hauer;Sean Young;Sci-Fi;/images/movies/80s/10_Blade Runner.jpg
+The Shawshank Redemption;1994;Frank Darabont;Tim Robbins;Morgan Freeman;Bob Gunton;Drama;/images/movies/90s/01_The Shawshank Redemption.jpg
+Schindler's List;1993;Steven Spielberg;Liam Neeson;Ben Kingsley;Ralph Fiennes;Biography;/images/movies/90s/02_Schindler’s List.jpg
+Pulp Fiction;1994;Quentin Tarantino;John Travolta;Uma Thurman;Samuel L. Jackson;Crime;/images/movies/90s/03_Pulp Fiction.jpg
+Fight Club;1999;David Fincher;Brad Pitt;Edward Norton;Meat Loaf;Drama;/images/movies/90s/04_Fight Club.jpg
+Forrest Gump;1994;Robert Zemeckis;Tom Hanks;Robin Wright;Gary Sinise;Drama;/images/movies/90s/05_Forrest Gump.jpg
+The Matrix;1999;Lana Wachowski;Keanu Reeves;Laurence Fishburne;Carrie-Anne Moss;Sci-Fi;/images/movies/90s/06_The Matrix.jpg
+GoodFellas;1990;Martin Scorsese;Robert De Niro;Ray Liotta;Joe Pesci;Biography;/images/movies/90s/07_GoodFellas.jpg
+The Silence of the Lambs;1991;Jonathan Demme;Jodie Foster;Anthony Hopkins;Lawrence A. Bonney;Thriller;/images/movies/90s/08_The Silence of the Lambs.jpg
+Se7en;1995;David Fincher;Morgan Freeman;Brad Pitt;Kevin Spacey;Crime;/images/movies/90s/09_Se7en.jpg
+Saving Private Ryan;1998;Steven Spielberg;Tom Hanks;Matt Damon;Tom Sizemore;War;/images/movies/90s/10_Saving Private Ryan.jpg
+The Lord of the Rings: The Return of the King;2003;Peter Jackson;Elijah Wood;Viggo Mortensen;Ian McKellen;Fantasy;/images/movies/2000_2010/01_The Lord of the Rings- The Return of the th.jpg
+The Dark Knight;2008;Christopher Nolan;Christian Bale;Heath Ledger;Aaron Eckhart;Action;/images/movies/2000_2010/02_The Dark Knight.jpg
+The Lord of the Rings: The Fellowship of the Ring;2001;Peter Jackson;Elijah Wood;Ian McKellen;Orlando Bloom;Fantasy;/images/movies/2000_2010/03_The Lord of the Rings- The Fellowship o.jpg
+The Lord of the Rings: The Two Towers;2002;Peter Jackson;Elijah Wood;Ian McKellen;Viggo Mortensen;Fantasy;/images/movies/2000_2010/04_The Lord of the Rings- The Two Towers.jpg
+City of God;2002;Fernando Meirelles;Alexandre Rodrigues;Leandro Firmino;Matheus Nachtergaele;Crime;/images/movies/2000_2010/05_City of God.jpg
+Spirited Away;2001;Hayao Miyazaki;Daveigh Chase;Suzanne Pleshette;Jason Marsden;Animation;/images/movies/2000_2010/06_Spirited Away.jpg
+The Pianist;2002;Roman Polanski;Adrien Brody;Thomas Kretschmann;Frank Finlay;Biography;/images/movies/2000_2010/07_The Pianist.jpg
+The Departed;2006;Martin Scorsese;Leonardo DiCaprio;Matt Damon;Jack Nicholson;Crime;/images/movies/2000_2010/08_The Departed.jpg
+Gladiator;2000;Ridley Scott;Russell Crowe;Joaquin Phoenix;Connie Nielsen;Action;/images/movies/2000_2010/09_Gladiator.jpg
+Memento;2000;Christopher Nolan;Guy Pearce;Carrie-Anne Moss;Joe Pantoliano;Mystery;/images/movies/2000_2010/10_Memento.jpg
+Inception;2010;Christopher Nolan;Leonardo DiCaprio;Joseph Gordon-Levitt;Elliot Page;Sci-Fi;/images/movies/2010_2020/01_Inception.jpg
+Interstellar;2014;Christopher Nolan;Matthew McConaughey;Anne Hathaway;Jessica Chastain;Sci-Fi;/images/movies/2010_2020/02_Interstellar.jpg
+Parasite;2019;Bong Joon Ho;Song Kang-ho;Lee Sun-kyun;Cho Yeo-jeong;Thriller;/images/movies/2010_2020/03_Parasite.jpg
+Whiplash;2014;Damien Chazelle;Miles Teller;J.K. Simmons;Melissa Benoist;Drama;/images/movies/2010_2020/04_Whiplash.jpg
+The Intouchables;2011;Olivier Nakache;François Cluzet;Omar Sy;Anne Le Ny;Biography;/images/movies/2010_2020/05_The Intouchables.jpg
+Spider-Man: Into the Spider-Verse;2018;Bob Persichetti;Shameik Moore;Jake Johnson;Hailee Steinfeld;Animation;/images/movies/2010_2020/06_Spider-Man- Into the Spider-Verse.jpg
+Avengers: Endgame;2019;Anthony Russo;Robert Downey Jr.;Chris Evans;Mark Ruffalo;Action;/images/movies/2010_2020/07_Avengers- Endgame.jpg
+Django Unchained;2012;Quentin Tarantino;Jamie Foxx;Christoph Waltz;Leonardo DiCaprio;Western;/images/movies/2010_2020/08_Django Unchained.jpg
+Joker;2019;Todd Phillips;Joaquin Phoenix;Robert De Niro;Zazie Beetz;Crime;/images/movies/2010_2020/09_Joker.jpg
+The Dark Knight Rises;2012;Christopher Nolan;Christian Bale;Tom Hardy;Anne Hathaway;Action;/images/movies/2010_2020/10_The Dark Knight Rises.jpg
+Dune: Part Two;2024;Denis Villeneuve;Timothée Chalamet;Zendaya;Rebecca Ferguson;Sci-Fi;/images/movies/2020_2025/01_Dune- Part Two.jpg
+Spider-Man: Across the Spider-Verse;2023;Joaquim Dos Santos;Shameik Moore;Hailee Steinfeld;Brian Tyree Henry;Animation;/images/movies/2020_2025/02_Spider-Man- Across the Spider-Verse.jpg
+Oppenheimer;2023;Christopher Nolan;Cillian Murphy;Emily Blunt;Matt Damon;Biography;/images/movies/2020_2025/03_Oppenheimer.jpg
+Top Gun: Maverick;2022;Joseph Kosinski;Tom Cruise;Miles Teller;Jennifer Connelly;Action;/images/movies/2020_2025/04_Top Gun- Maverick.jpg
+The Father;2020;Florian Zeller;Anthony Hopkins;Olivia Colman;Mark Gatiss;Drama;/images/movies/2020_2025/05_The Father.jpg
+Godzilla Minus One;2023;Takashi Yamazaki;Ryunosuke Kamiki;Minami Hamabe;Yuki Yamada;Sci-Fi;/images/movies/2020_2025/06_Godzilla Minus One.jpg
+Spider-Man: No Way Home;2021;Jon Watts;Tom Holland;Zendaya;Benedict Cumberbatch;Action;/images/movies/2020_2025/07_Spider-Man- No Way Home.jpg
+Poor Things;2023;Yorgos Lanthimos;Emma Stone;Mark Ruffalo;Willem Dafoe;Comedy;/images/movies/2020_2025/08_Poor Things.jpg
+Dune;2021;Denis Villeneuve;Timothée Chalamet;Rebecca Ferguson;Oscar Isaac;Sci-Fi;/images/movies/2020_2025/09_Dune.jpg
+CODA;2021;Siân Heder;Emilia Jones;Marlee Matlin;Troy Kotsur;Drama;/images/movies/2020_2025/10_CODA.jpg
