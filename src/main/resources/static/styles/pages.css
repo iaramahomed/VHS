@@ -276,12 +276,15 @@ a:active {
     font-weight: bold;
 }
 
+.container-fluid.mt-4 {
+    margin-top: 60px !important;
+}
 
 .movie-header-title {
     font-size: 3.5rem;
     font-weight: 900;
     color: #493628;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
@@ -294,7 +297,7 @@ a:active {
 
 .poster-detail {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
@@ -303,11 +306,13 @@ a:active {
     font-weight: 700;
     color: #493628;
     margin-top: 20px;
+    margin-bottom: 0 !important;
     font-size: 1.1rem;
 }
 
 .meta-value {
     color: #493628;
+    margin-top: 0 !important;
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
