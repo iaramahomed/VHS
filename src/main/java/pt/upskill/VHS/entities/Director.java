@@ -17,7 +17,7 @@ public class Director {
 
     private String name;
 
-    @ManyToMany(mappedBy = "directors")
+    @ManyToMany(mappedBy = "director")
     private List<Movie> movies = new ArrayList<>();
 
     public Director() {}

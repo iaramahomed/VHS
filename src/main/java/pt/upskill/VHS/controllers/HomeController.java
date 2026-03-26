@@ -10,13 +10,6 @@ public class HomeController {
         return "intro";
     }
 
-
-
-    @GetMapping("/homepage")
-    public String homePage() {
-        return "homepage";
-    }
-
     @GetMapping("/contacts")
     public String contactsPage() {
         return "contacts";
