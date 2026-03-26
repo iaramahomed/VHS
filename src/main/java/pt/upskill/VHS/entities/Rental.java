@@ -17,10 +17,18 @@ public class Rental {
     private LocalDate dateOfReturn;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToMany(mappedBy = "rentals")
+    @ManyToMany
+    @JoinTable(
+            name = "rental_movie",
+            joinColumns = @JoinColumn(name = "rental_id"),
+            inverseJoinColumns = @JoinColumn(name = "movie_id")
+    )
     private List<Movie> movies = new ArrayList<>();
+
+    public Rental(){}
 
     public Long getId() {
         return id;
