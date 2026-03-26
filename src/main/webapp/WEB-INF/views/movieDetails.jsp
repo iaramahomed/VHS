@@ -54,8 +54,9 @@
             </div>
 
             <div class="col ps-4">
-                <div class="d-flex align-items-center justify-content-between mb-2" style="max-width: 300px;">
+                <div class="d-flex align-items-center justify-content-between mb-3">
                     <div class="stars rating-stars">★★★★★</div>
+
                     <div class="action-icons-detail">
                         <span>♡</span>
                         <span class="ms-3">➦</span>

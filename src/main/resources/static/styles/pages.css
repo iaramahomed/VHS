@@ -329,3 +329,18 @@ a:active {
     color: #493628;
 }
 
+.action-icons-detail {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #493628;
+    cursor: pointer;
+}
+
+.action-icons-detail span:hover {
+    opacity: 0.7;
+}
+
+.col.ps-4 {
+    flex-grow: 1;
+}
