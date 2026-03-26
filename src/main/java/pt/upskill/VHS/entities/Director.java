@@ -20,6 +20,12 @@ public class Director {
     @ManyToMany(mappedBy = "directors")
     private List<Movie> movies = new ArrayList<>();
 
+    public Director() {}
+
+    public Director(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

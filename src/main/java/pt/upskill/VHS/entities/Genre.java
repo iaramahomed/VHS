@@ -20,6 +20,12 @@ public class Genre {
     @ManyToMany(mappedBy = "genres")
     private List<Movie> movies = new ArrayList<>();
 
+    public Genre() {}
+
+    public Genre(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
