@@ -45,19 +45,17 @@
         </form>
     </div>
 
-    <div class="container-fluid mt-4">
-        <h1 class="movie-header-title">${movie.name}</h1>
+    <div class="container-fluid mt-5"> <h1 class="movie-header-title mb-4">${movie.name}</h1>
 
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row gx-2 align-items-start">
+
+            <div class="col-auto">
                 <img src="${movie.imagePath}" alt="${movie.name}" class="poster-detail">
-
-
             </div>
 
-            <div class="col-md-8 ps-md-5">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="stars">★★★★★</div>
+            <div class="col ps-4">
+                <div class="d-flex align-items-center justify-content-between mb-2" style="max-width: 300px;">
+                    <div class="stars rating-stars">★★★★★</div>
                     <div class="action-icons-detail">
                         <span>♡</span>
                         <span class="ms-3">➦</span>
@@ -70,7 +68,7 @@
                 <p class="meta-label">Director</p>
                 <p class="meta-value">${movie.director.name}</p>
 
-                <p class="meta-label mb-0">Actors</p>
+                <p class="meta-label">Actors</p>
                 <div class="meta-value">
                     <c:forEach items="${movie.actors}" var="actor">
                         <div class="actor-name">${actor.name}</div>
@@ -79,17 +77,14 @@
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-4">
             <div class="col-12">
                 <p class="description-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
         </div>
-
     </div>
 </div>
 
