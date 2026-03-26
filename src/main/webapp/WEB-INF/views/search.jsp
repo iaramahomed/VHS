@@ -71,7 +71,7 @@
             <option value="5">Fantasy</option>
             <option value="6">Horror</option>
             <option value="7">Musical</option>
-            <option value="8">Roamce</option>
+            <option value="8">Romance</option>
             <option value="9">Sci-Fi</option>
             <option value="10">Western</option>
         </select>
