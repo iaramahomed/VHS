@@ -60,8 +60,22 @@
 
         <input class="search-bar" placeholder="Search movies...">
     </div>
-
     <div class="top-movie">
+
+        <select class="form-select" aria-label="Default select example">
+            <option selected> Genre</option>
+            <option value="1">Animation</option>
+            <option value="2">Comedy</option>
+            <option value="3">Crime</option>
+            <option value="4">Drama</option>
+            <option value="5">Fantasy</option>
+            <option value="6">Horror</option>
+            <option value="7">Musical</option>
+            <option value="8">Roamce</option>
+            <option value="9">Sci-Fi</option>
+            <option value="10">Western</option>
+        </select>
+
         <h2 class="section-title">Search</h2>
 
         <div class="movies-grid">
