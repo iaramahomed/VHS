@@ -17,8 +17,11 @@ public class MovieController {
     private MovieRepository movieRepo;
 
     @GetMapping("/homepage")
-    public String showAllMovies(Model model) {
-        model.addAttribute("movies", movieRepo.findAll());
+    public String showHomepage(Model model) {
+        List<Movie> top10Movies = movieRepo.findTop10ByOrderByYearDesc();
+
+        model.addAttribute("movies", top10Movies);
+        model.addAttribute("sectionTitle", "Top 10 Most Recent");
         return "homepage";
     }
 

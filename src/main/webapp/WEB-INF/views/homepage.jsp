@@ -61,19 +61,25 @@
             <a href="/digital" class="category-image"><img src="/images/Digital_botao.jpg"></a>
         </div>
         <div class="top-movies">
-            <h2 class="section-title">Top 10</h2>
+
 
             <div class="movies-grid">
-                <div class="movie-img"> <img src="/images/80s/01_The Empire Strikes Back.jpg"></div>
-                <div class="movie-img"> <img src="/images/80s/02_Back to the future.jpg"></div>
-                <div class="movie-img"> <img src="/images/90s/01_The Shawshank Redemption.jpg"></div>
-                <div class="movie-img"> <img src="/images/90s/02_Schindler’s List.jpg"></div>
-                <div class="movie-img"> <img src="/images/2000_2010/01_The Lord of the Rings- The Return of the King.jpg"></div>
-                <div class="movie-img"> <img src="/images/2000_2010/02_The Dark Knight.jpg"></div>
-                <div class="movie-img"> <img src="/images/2010_2020/01_Inception.jpg"></div>
-                <div class="movie-img"> <img src="/images/2010_2020/02_Interstellar.jpg"></div>
-                <div class="movie-img"> <img src="/images/2020_2025/01_Dune- Part Two.jpg"></div>
-                <div class="movie-img"> <img src="/images/2020_2025/02_Spider-Man- Across the Spider-Verse.jpg"></div>
+                <div class="top-movies">
+                    <h2 class="section-title">
+                        <c:out value="${not empty selectedDecade ? selectedDecade : sectionTitle}" />
+                    </h2>
+
+                    <div class="movies-grid">
+                        <c:forEach items="${movies}" var="movie">
+                            <div class="movie-img">
+                                <a href="/movies/details/${movie.id}">
+                                    <img src="${movie.imagePath}" alt="${movie.name}" title="${movie.name}">
+                                </a>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
+                </div>
 
             </div>
         </div>
