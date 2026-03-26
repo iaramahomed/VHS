@@ -46,21 +46,23 @@
     </div>
 
     <div class="container-fluid mt-4">
-        <h1 class="movie-header-title">MOVIE</h1>
-
-        <p class="details-title">${movie.name}</p>
+        <h1 class="movie-header-title">${movie.name}</h1>
 
         <div class="row">
             <div class="col-md-4">
                 <img src="${movie.imagePath}" alt="${movie.name}" class="poster-detail">
+
+                <p class="description-text mt-3">
+                    ${movie.description}
+                </p>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-8 ps-md-5">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="stars">★★★★★</div>
-                    <div>
-                        <span class="action-btns">♡</span>
-                        <span class="action-btns">➦</span>
+                    <div class="action-icons-detail">
+                        <span>♡</span>
+                        <span class="ms-3">➦</span>
                     </div>
                 </div>
 
@@ -75,14 +77,6 @@
                     <c:forEach items="${movie.actors}" var="actor" varStatus="loop">
                         ${actor.name}${not loop.last ? ', ' : ''}
                     </c:forEach>
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <p class="description-text">
-                    ${movie.description}
                 </p>
             </div>
         </div>
