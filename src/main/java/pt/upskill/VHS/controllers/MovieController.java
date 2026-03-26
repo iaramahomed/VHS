@@ -36,4 +36,18 @@ public class MovieController {
 
         return "homepage";
     }
+
+
+    @GetMapping("/movies/details/{id}")
+    public String showMovieDetails(@PathVariable Long id, Model model) {
+        Movie movie = movieRepo.findById(id).orElse(null);
+
+        if (movie == null) {
+            return "redirect:/homepage";
+        }
+
+        model.addAttribute("movie", movie);
+
+        return "movieDetails";
+    }
 }
