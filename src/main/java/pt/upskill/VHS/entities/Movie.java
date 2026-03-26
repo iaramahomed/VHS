@@ -17,15 +17,15 @@ public class Movie {
     private String name;
     private int year;
 
+    @Column(length = 1000)
+    private String description;
+
+    private String imagePath;
+
     @ManyToOne
     private movieFormat movieFormats;
 
-    @ManyToMany
-    @JoinTable(
-            name = "rental_movie",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "rental_id")
-    )
+    @ManyToMany(mappedBy = "movies")
     private List<Rental> rentals = new ArrayList<>();
 
     @ManyToMany
@@ -36,21 +36,13 @@ public class Movie {
     )
     private List<Actor> actors = new ArrayList<>();
 
-    @ManyToMany
-    @JoinTable(
-            name = "director_movie",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "director_id")
-    )
-    private List<Director> directors = new ArrayList<>();
+    @ManyToOne
+    private Director director;
 
-    @ManyToMany
-    @JoinTable(
-            name = "genre_movie",
-            joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_id")
-    )
-    private List<Genre> genres = new ArrayList<>();
+    @ManyToOne
+    private Genre genre;
+
+    public Movie(){}
 
     public Long getId() {
         return id;
@@ -76,6 +68,12 @@ public class Movie {
         this.year = year;
     }
 
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public String getImagePath() { return imagePath; }
+    public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+
     public List<Rental> getRentals() {
         return rentals;
     }
@@ -100,20 +98,13 @@ public class Movie {
         this.actors = actors;
     }
 
-    public List<Director> getDirectors() {
-        return directors;
-    }
+    public Director getDirector() { return director; }
 
-    public void setDirectors(List<Director> directors) {
-        this.directors = directors;
-    }
+    public void setDirector(Director director) { this.director = director; }
 
+    public Genre getGenre() { return genre; }
 
-    public List<Genre> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(List<Genre> genres) {
-        this.genres = genres;
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }
