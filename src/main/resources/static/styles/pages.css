@@ -296,8 +296,8 @@ a:active {
 }
 
 .poster-detail {
-    width: 100%;
-    max-width: 250px;
+    width: 200px;
+    height: 290px;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
@@ -318,7 +318,7 @@ a:active {
 }
 
 .description-text {
-    margin-top: 20px;
+    margin-top: 0;
     color: #493628;
     line-height: 1.5;
     font-size: 1rem;
