@@ -63,6 +63,10 @@
                     </div>
                 </div>
 
+                <div class="movie-year">
+                    <p class="meta-value">${movie.year}</p>
+                </div>
+
                 <p class="meta-label">Genre</p>
                 <p class="meta-value">${movie.genre.name}</p>
 
