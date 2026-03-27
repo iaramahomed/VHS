@@ -39,6 +39,14 @@ public class MovieDataLoader implements CommandLineRunner {
         while ((line = reader.readLine()) != null) {
             String[] d = line.split(";");
 
+            if (d.length < 8) continue;
+
+            String movieName = d[0];
+
+            if (movieRepo.findByName(movieName).isPresent()) {
+                continue;
+            }
+
             Director dir = directorRepo.findByName(d[2])
                     .orElseGet(() -> directorRepo.save(new Director(d[2])));
 
@@ -47,21 +55,27 @@ public class MovieDataLoader implements CommandLineRunner {
 
             Movie m = new Movie();
             m.setName(d[0]);
-            m.setYear(Integer.parseInt(d[1]));
+            m.setYear(Integer.parseInt(d[1].trim()));
             m.setDirector(dir);
             m.setGenre(gen);
             m.setImagePath(d[7]);
-            m.setDescription("A classic movie from the " + d[1] + "s. Starring " + d[3] + ".");
+
+            if (d.length > 8 && !d[8].isEmpty()) {
+                m.setDescription(d[8]);
+            } else {
+                m.setDescription("Descrição pendente...");
+            }
 
             for (int i = 3; i <= 5; i++) {
-                String actorName = d[i];
-                Actor actor = actorRepo.findByName(actorName)
-                        .orElseGet(() -> actorRepo.save(new Actor(actorName)));
-                m.getActors().add(actor);
+                if (i < d.length) {
+                    String actorName = d[i];
+                    Actor actor = actorRepo.findByName(actorName)
+                            .orElseGet(() -> actorRepo.save(new Actor(actorName)));
+                    m.getActors().add(actor);
+                }
             }
 
             movieRepo.save(m);
-        }
-        System.out.println(">>> 50 Movies imported successfully!");
+        }        System.out.println(">>> 50 Movies imported successfully!");
     }
 }

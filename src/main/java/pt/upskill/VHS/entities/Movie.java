@@ -17,7 +17,7 @@ public class Movie {
     private String name;
     private int year;
 
-    @Column(length = 1000)
+    @Column(length = 10000)
     private String description;
 
     private String imagePath;
@@ -106,5 +106,21 @@ public class Movie {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                ", description='" + description + '\'' +
+                ", imagePath='" + imagePath + '\'' +
+                ", movieFormats=" + movieFormats +
+                ", rentals=" + rentals +
+                ", actors=" + actors +
+                ", director=" + director +
+                ", genre=" + genre +
+                '}';
     }
 }

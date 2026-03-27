@@ -40,7 +40,7 @@ public class MovieController {
 
     @GetMapping("/movies/details/{id}")
     public String showMovieDetails(@PathVariable Long id, Model model) {
-        Movie movie = movieRepo.findById(id).orElse(null);
+        Movie movie = movieRepo.findMovieById(id);
 
         if (movie == null) {
             return "redirect:/homepage";
