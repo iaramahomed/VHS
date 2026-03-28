@@ -14,5 +14,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     List<Movie> findByNameContainingIgnoreCase(String title);
     List<Movie> findTop10ByOrderByYearDesc();
 
+    List<Movie> findByYearBetweenOrderByYearDesc(int startYear, int endYear);
+    List<Movie> findByYearGreaterThanEqualOrderByYearDesc(int year);
+
     Movie findMovieById(Long id);
 }
