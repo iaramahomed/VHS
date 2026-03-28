@@ -25,21 +25,6 @@ public class HomeController {
         return "shop";
     }
 
-    @GetMapping("/vhs")
-    public String vhsPage() {
-        return "vhs";
-    }
-
-    @GetMapping("/dvd")
-    public String dvdPage() {
-        return "dvd";
-    }
-
-    @GetMapping("/digital")
-    public String digitalPage() {
-        return "digital";
-    }
-
     @GetMapping("/search")
     public String searchPage() {
         return "search";

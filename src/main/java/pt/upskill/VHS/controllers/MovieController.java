@@ -50,4 +50,29 @@ public class MovieController {
 
         return "movieDetails";
     }
+
+    @GetMapping("/vhs")
+    public String showVhsMovies(Model model) {
+        List<Movie> vhsMovies = movieRepo.findByYearBetweenOrderByYearDesc(1980, 1999);
+
+        model.addAttribute("movies", vhsMovies);
+        return "vhs";
+    }
+
+    @GetMapping("/dvd")
+    public String showDvdMovies(Model model) {
+        List<Movie> dvdMovies = movieRepo.findByYearBetweenOrderByYearDesc(2000, 2010);
+
+        model.addAttribute("movies", dvdMovies);
+        return "dvd";
+    }
+
+    @GetMapping("/digital")
+    public String showDigitalMovies(Model model) {
+        List<Movie> digitalMovies = movieRepo.findByYearGreaterThanEqualOrderByYearDesc(2011);
+
+        model.addAttribute("movies", digitalMovies);
+        return "digital";
+    }
 }
+

@@ -53,9 +53,18 @@
     </div>
 
     <div class="top-movies">
-        <h2 class="section-title">DIGITAL</h2>
+        <h2 class="section-title">Our Digital Collection</h2>
     </div>
 
+    <div class="movies-grid">
+        <c:forEach items="${movies}" var="movie">
+            <div class="movie-img">
+                <a href="/movies/details/${movie.id}">
+                    <img src="${movie.imagePath}" alt="${movie.name}" title="${movie.name}">
+                </a>
+            </div>
+        </c:forEach>
+    </div>
 
 </div>
 </body>
