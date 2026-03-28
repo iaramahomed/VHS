@@ -8,8 +8,6 @@ import java.util.List;
 @Entity
 public class Movie {
 
-    //FALTA CRIAR A LIGAÇÃO ENTRE O MOVIEFORMAT E AS DÉCADAS
-
     @Id
     @GeneratedValue
     private Long id;
@@ -22,9 +20,6 @@ public class Movie {
 
     @Column(length = 1000)
     private String imagePath;
-
-    @ManyToOne
-    private movieFormat movieFormats;
 
     @ManyToMany(mappedBy = "movies")
     private List<Rental> rentals = new ArrayList<>();
@@ -79,14 +74,6 @@ public class Movie {
         return rentals;
     }
 
-    public movieFormat getMovieFormats() {
-        return movieFormats;
-    }
-
-    public void setMovieFormats(movieFormat movieFormats) {
-        this.movieFormats = movieFormats;
-    }
-
     public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
@@ -117,7 +104,6 @@ public class Movie {
                 ", year=" + year +
                 ", description='" + description + '\'' +
                 ", imagePath='" + imagePath + '\'' +
-                ", movieFormats=" + movieFormats +
                 ", rentals=" + rentals +
                 ", actors=" + actors +
                 ", director=" + director +

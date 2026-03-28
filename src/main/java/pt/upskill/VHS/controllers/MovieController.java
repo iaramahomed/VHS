@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import pt.upskill.VHS.entities.Movie;
 import pt.upskill.VHS.repositories.MovieRepository;
 
@@ -73,6 +74,19 @@ public class MovieController {
 
         model.addAttribute("movies", digitalMovies);
         return "digital";
+    }
+
+    @GetMapping("/search")
+    public String searchMovies(@RequestParam("query") String query, Model model) {
+        if (query == null || query.trim().isEmpty()) {
+            return "redirect:/homepage";
+        }
+
+        List<Movie> foundMovies = movieRepo.findByNameContainingIgnoreCase(query);
+
+        model.addAttribute("movies", foundMovies);
+
+        return "search";
     }
 }
 
