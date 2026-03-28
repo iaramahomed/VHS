@@ -28,7 +28,8 @@ public class MovieDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if (movieRepo.count() > 0) return;
+
+        // if (movieRepo.count() > 0) return;
 
         InputStream is = getClass().getResourceAsStream("/movies.csv");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
