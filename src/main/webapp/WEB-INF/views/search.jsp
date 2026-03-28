@@ -58,9 +58,31 @@
             Hello user! What do you want to watch today?
         </h2>
 
-        <input class="search-bar" placeholder="Search movies...">
+        <form action="/search" method="get">
+            <input class="search-bar" name="query" placeholder="Search movies..."
+                   value="${param.query}"> </form>
     </div>
+
     <div class="top-movie">
+        <h2 class="section-title">
+            <c:out value="${not empty sectionTitle ? sectionTitle : 'Search'}" />
+        </h2>
+
+        <div class="movies-grid">
+            <c:forEach items="${movies}" var="movie">
+                <div class="movie-img">
+                    <a href="/movies/details/${movie.id}">
+                        <img src="${movie.imagePath}" alt="${movie.name}" title="${movie.name}"
+                             style="width: 100%; border-radius: 10px;">
+                    </a>
+                </div>
+            </c:forEach>
+
+            <c:if test="${empty movies && not empty param.query}">
+                <p style="color: #493628;">No movies found for "${param.query}"</p>
+            </c:if>
+        </div>
+    </div>
 
         <select class="form-select" aria-label="Default select example">
             <option selected> Genre</option>
@@ -75,24 +97,6 @@
             <option value="9">Sci-Fi</option>
             <option value="10">Western</option>
         </select>
-
-        <h2 class="section-title">Search</h2>
-
-        <div class="movies-grid">
-            <div class="movie-img">Animção</div>
-            <div class="movie-img">Comedy</div>
-            <div class="movie-img">Crime</div>
-            <div class="movie-img">Drama</div>
-            <div class="movie-img">Fantasy</div>
-            <div class="movie-img">Horror</div>
-            <div class="movie-img">Musical</div>
-            <div class="movie-img">Romance</div>
-            <div class="movie-img">Sci-Fi</div>
-            <div class="movie-img">Western</div>
-        </div>
-    </div>
-
-
 </div>
 
 </body>

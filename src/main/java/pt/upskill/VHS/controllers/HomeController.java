@@ -25,9 +25,5 @@ public class HomeController {
         return "shop";
     }
 
-    @GetMapping("/search")
-    public String searchPage() {
-        return "search";
-    }
 
 }

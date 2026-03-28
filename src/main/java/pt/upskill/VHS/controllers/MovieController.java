@@ -77,14 +77,17 @@ public class MovieController {
     }
 
     @GetMapping("/search")
-    public String searchMovies(@RequestParam("query") String query, Model model) {
+    public String showSearchPage(@RequestParam(value = "query", required = false) String query, Model model) {
+
         if (query == null || query.trim().isEmpty()) {
-            return "redirect:/homepage";
+            model.addAttribute("sectionTitle", "Search Movies");
+            return "search";
         }
 
         List<Movie> foundMovies = movieRepo.findByNameContainingIgnoreCase(query);
 
         model.addAttribute("movies", foundMovies);
+        model.addAttribute("sectionTitle", "Results for: " + query);
 
         return "search";
     }
